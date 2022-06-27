@@ -15,8 +15,8 @@ jobs:
         with:
           node-version: "14.x"
 
-      - name: install
+      - name: install and publish
         run: |
-          cd packages/package1
+          cd packages/${{ inputs.package_name }}
           npm install
-          ls
+          npm publish
