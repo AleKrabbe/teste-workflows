@@ -25,6 +25,6 @@ jobs:
           node-version: "14.x"
 
       - name: install and publish
-        runs: |
+        run: |
         	cd packages/${{ matrix.package_name }}
           npm install
