@@ -7,4 +7,5 @@ jobs:
   execute_generic_workflow:
     uses: ./.github/workflows/generic_package_workflow.yml
     with:
-      package_names: "["package1", "package2"]"
+      package_names: >-
+        ["package1", "package2"]
