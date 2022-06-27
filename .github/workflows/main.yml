@@ -11,3 +11,4 @@ jobs:
 
   call_other_workflows:
     uses: ./.github/workflows/package1_workflow1.yml
+    needs: checkout

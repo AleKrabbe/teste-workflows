@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Log
-        run: echo 'this is the worflow for package 1 running'
+        run: ls
