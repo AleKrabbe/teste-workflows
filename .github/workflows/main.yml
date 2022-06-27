@@ -5,18 +5,18 @@ on:
 
 jobs:
   monorepo_split:
-    runs-on: ubuntu-latest
-
     strategy:
       matrix:
         package:
           - package1
           - package2
 
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Run workflow for package ${{ matrix.package }}
-        uses: ./.github/workflows/generic_package_workflow.yml
-        with:
-          package_name: ${{ matrix.package }}
+      - name: teste
+        run: |
+          echo ${{ matrix.package }}
+    #   - name: Run workflow for package ${{ matrix.package }}
+    #     uses: ./.github/workflows/generic_package_workflow.yml
+    #     with:
+    #       package_name: ${{ matrix.package }}
