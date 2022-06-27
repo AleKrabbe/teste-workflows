@@ -14,17 +14,12 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
-      - name: teste
-        runs: |
-          echo ${{ inputs.package_name }}
+      - name: setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14.x"
 
-      # - name: setup Node
-      #   uses: actions/setup-node@v2
-      #   with:
-      #     node-version: "14.x"
-
-      # - name: install and publish
-      #   run: |
-      #     cd packages/${{ inputs.package_name }}
-      #     npm install
-      #     npm publish
+      - name: install and publish
+        uses: actions/publish-action@v1
+        with:
+          package_name: ${{ inputs.package_name }}
