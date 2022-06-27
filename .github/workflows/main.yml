@@ -4,16 +4,16 @@ on:
   workflow_dispatch:
 
 jobs:
-  monorepo_split:
-    strategy:
-      matrix:
-        package:
-          - package1
-          - package2
+  # monorepo_split:
+  #   strategy:
+  #     matrix:
+  #       package:
+  #         - package1
+  #         - package2
 
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run workflow for package ${{ matrix.package }}
-        uses: ./.github/workflows/generic_package_workflow.yml
-        with:
-          package_name: ${{ matrix.package }}
+  #   runs-on: ubuntu-latest
+  #   steps:
+  execute_generic_workflow:
+    uses: ./.github/workflows/generic_package_workflow.yml
+    with:
+      package_names: ["package1", "package2"]
