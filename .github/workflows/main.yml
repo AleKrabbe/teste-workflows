@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  execute_generic_workflow:
+  publishing:
     uses: ./.github/workflows/generic_package_workflow.yml
     with:
       package_names: >-
