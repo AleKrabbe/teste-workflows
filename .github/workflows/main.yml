@@ -13,10 +13,7 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - name: teste
-        run: |
-          echo ${{ matrix.package }}
-    #   - name: Run workflow for package ${{ matrix.package }}
-    #     uses: ./.github/workflows/generic_package_workflow.yml
-    #     with:
-    #       package_name: ${{ matrix.package }}
+      - name: Run workflow for package ${{ matrix.package }}
+        uses: ./.github/workflows/generic_package_workflow.yml
+        with:
+          package_name: ${{ matrix.package }}
