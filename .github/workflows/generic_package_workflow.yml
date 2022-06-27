@@ -8,12 +8,14 @@ on:
         type: string
 
 jobs:
-  execute_package1_workflow:
+  publish_workflow:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
         package_name: ${{fromJson(inputs.package_names)}}
+
+    name: Publishing ${{ matrix.package_name }}
 
     steps:
       - name: checkout
