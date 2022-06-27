@@ -14,6 +14,8 @@ jobs:
           - package2
 
     steps:
+      - uses: actions/checkout@v2
+
       - name: Run workflow for package ${{ matrix.package }}
         uses: ./.github/workflows/generic_package_workflow.yml
         with:
