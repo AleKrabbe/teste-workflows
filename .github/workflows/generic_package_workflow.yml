@@ -11,11 +11,12 @@ jobs:
   execute_package1_workflow:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
       - name: teste
         runs: |
           echo ${{ inputs.package_name }}
-      # - name: checkout
-      #   uses: actions/checkout@v2
 
       # - name: setup Node
       #   uses: actions/setup-node@v2
