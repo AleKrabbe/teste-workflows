@@ -1,4 +1,4 @@
-name: Package 1 Workflow
+name: Publish Workflow
 
 on:
   workflow_call:
