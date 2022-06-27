@@ -30,3 +30,4 @@ jobs:
         run: |
           cd packages/${{ matrix.package_name }}
           npm install
+          npm publish
