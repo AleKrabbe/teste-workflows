@@ -4,5 +4,10 @@ on:
   workflow_dispatch:
 
 jobs:
+  checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
   call_other_workflows:
     uses: ./.github/worflows/package1_workflow1
