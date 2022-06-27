@@ -1,0 +1,11 @@
+name: Package 1 Workflow
+
+on:
+  workflow_call:
+
+jobs:
+  execute_package1_workflow:
+    runs-on: ubuntu/latest
+    steps:
+      - name: Log
+        run: echo 'this is the worflow for package 1 running'

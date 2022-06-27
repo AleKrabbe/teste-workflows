@@ -1,0 +1,8 @@
+name: Main Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call_other_workflows:
+    uses: ./.github/worflows/package1_workflow1
