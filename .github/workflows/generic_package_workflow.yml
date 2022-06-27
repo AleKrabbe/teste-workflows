@@ -26,5 +26,5 @@ jobs:
 
       - name: install and publish
         run: |
-        	cd packages/${{ matrix.package_name }}
+          cd packages/${{ matrix.package_name }}
           npm install
